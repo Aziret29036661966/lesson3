@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
             public void onRefresh() {
                 ++page;
                 request(binding.edWrote.getText().toString().trim(), perPage, page);
+                binding.swRl.setRefreshing(false);
             }
         });
          binding.btnApply.setOnClickListener(v->{
